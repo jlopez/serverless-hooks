@@ -7,9 +7,10 @@ are fired.
 Simply declare npm scripts with a name of the form `hook:EVENT` where `EVENT` is
 the name of a serverless hook event, i.e.:
 
-* `hook:before:offline:start`: Run script before serverless offline launches.
+* `hook:before:offline:start:init`: Run script before serverless offline launches.
   This can be particularly useful to setup the local environment, such as launching
   a local kinesis and initializing it by creating some streams.
+* `hook:offline:start:ready`: Run post-startup script, e.g. seed s3 files.
 * `hook:after:offline:start`: Run cleanup scripts after serverless offline terminates.
 * `hook:before:package:initialize`: Run script before the packaging initialization.
 
